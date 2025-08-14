@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #ffffff;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 430px;
+    height: 932px;
+    margin: 0 auto;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 430px;
+    height: 932px;
+    background: linear-gradient(135deg, #ffe4e3 0%, #faeede 100%);
+}
+
+.title-main {
+    position: absolute;
+    top: 288px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 1;
+    color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.title-main p {
+    display: block;
+    line-height: normal;
+    white-space: pre;
+}
+
+.subtitle {
+    position: absolute;
+    top: 249px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1;
+    color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.subtitle p {
+    display: block;
+    line-height: normal;
+    white-space: pre;
+}
+
+.input-container {
+    position: absolute;
+    top: 439px;
+    left: 50px;
+    width: 329px;
+    height: 54px;
+    background: linear-gradient(to right, #ffe4e4, #f9eedd);
+    border-radius: 30px;
+    z-index: 10;
+}
+
+.input-border {
+    position: absolute;
+    inset: 0;
+    border: 3px solid #d83939;
+    border-radius: 30px;
+    pointer-events: none;
+    box-shadow: 5px 5px 4px 0px rgba(255, 255, 255, 0.25);
+}
+
+.message-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    border-radius: 30px;
+    padding: 0 20px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+}
+
+.message-input::placeholder {
+    color: #666;
+}
+
+.send-button {
+    position: absolute;
+    top: 538px;
+    left: 168px;
+    width: 94px;
+    height: 54px;
+    background: linear-gradient(to right, #ffe4e3, #faeede);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.2s ease;
+}
+
+.send-button:hover {
+    transform: scale(1.05);
+}
+
+.button-border {
+    position: absolute;
+    inset: 0;
+    border: 3px solid #d83939;
+    border-radius: 30px;
+    pointer-events: none;
+}
+
+.send-text {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1;
+    color: #d83939;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 430px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .background {
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .input-container {
+        width: calc(100vw - 100px);
+        left: 50px;
+    }
+}
